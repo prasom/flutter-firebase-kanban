@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "987258514322",
+    "firebase_url": "https://mea-smart-management-2.firebaseio.com",
+    "project_id": "mea-smart-management-2",
+    "storage_bucket": "mea-smart-management-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987258514322:android:8027344b71ec2d8d",
+        "android_client_info": {
+          "package_name": "com.example.meaSmartManagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987258514322-hc3m3v34hf2dsj0k1uhcko48q6heruro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPhWtdnyky9w-o3btegY635stAlELIgnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987258514322-hc3m3v34hf2dsj0k1uhcko48q6heruro.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "987258514322-jnq7s0hi4j49id2hg7h5pcqc6de0dmr5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.test.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987258514322:android:3093f638fefe5168",
+        "android_client_info": {
+          "package_name": "com.example.mea_smart_project_management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987258514322-hc3m3v34hf2dsj0k1uhcko48q6heruro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPhWtdnyky9w-o3btegY635stAlELIgnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987258514322-hc3m3v34hf2dsj0k1uhcko48q6heruro.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "987258514322-jnq7s0hi4j49id2hg7h5pcqc6de0dmr5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.test.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987258514322:android:22d2197d895ee5d3",
+        "android_client_info": {
+          "package_name": "com.example.measmartmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987258514322-hc3m3v34hf2dsj0k1uhcko48q6heruro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPhWtdnyky9w-o3btegY635stAlELIgnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987258514322-hc3m3v34hf2dsj0k1uhcko48q6heruro.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "987258514322-jnq7s0hi4j49id2hg7h5pcqc6de0dmr5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.test.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
