@@ -1,17 +1,20 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:mea_smart_project_management/apis/firebase_database_api.dart';
-import 'package:mea_smart_project_management/models/fb_status_model.dart';
+import 'package:mea_smart_project_management/models/fb_projects_model.dart';
 import 'package:mea_smart_project_management/utils/status_color_util.dart';
-import 'package:mea_smart_project_management/widgets/kanban_list_widget.dart';
 import 'package:mea_smart_project_management/widgets/pending_action_widget.dart';
+import 'package:mea_smart_project_management/widgets/sub_kanban_list_widget.dart';
 
-class FBMainProjectPage extends StatefulWidget {
+class SubProjectPage extends StatefulWidget {
+  final FBProject project;
+
+  const SubProjectPage({Key key, @required this.project}) : super(key: key);
   @override
-  _FBMainProjectPageState createState() => _FBMainProjectPageState();
+  _SubProjectPageState createState() => _SubProjectPageState();
 }
 
-class _FBMainProjectPageState extends State<FBMainProjectPage> {
+class _SubProjectPageState extends State<SubProjectPage> {
   bool _anchorToBottom = false;
   FirebaseDatabaseUtil databaseUtil;
 
@@ -30,40 +33,21 @@ class _FBMainProjectPageState extends State<FBMainProjectPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // elevation: 1.0,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {},
+    return Container(
+      decoration: new BoxDecoration(
+        image: new DecorationImage(
+          image: new AssetImage("assets/project_bg.jpg"),
+          fit: BoxFit.cover,
         ),
-        title: Text('Main Porjects'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(Icons.more_vert),
-            onPressed: () {},
-          ),
-        ],
       ),
-      body: Container(
-        decoration: new BoxDecoration(
-          image: new DecorationImage(
-            image: new AssetImage("assets/project_bg.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: showKanban(),
-      ),
+      child: showKanban(),
     );
   }
 
   Widget showKanban() {
     return new StreamBuilder<Event>(
-      stream: FirebaseDatabase.instance.reference().child('ProjectStatus').onValue,
+      stream:
+          FirebaseDatabase.instance.reference().child('ProjectStatus').onValue,
       builder: (BuildContext context, AsyncSnapshot<Event> event) {
         if (!event.hasData) return PendingAction();
         List<dynamic> schedules = event.data.snapshot.value;
@@ -109,8 +93,10 @@ class _FBMainProjectPageState extends State<FBMainProjectPage> {
                                 Chip(
                                   backgroundColor: Color(
                                       StatusColorUtil.getColorHexFromStr(
-                                          schedules[index]['status_color'])),
-                                  label: Text(schedules[index]['status_name'].toString()),
+                                          schedules[index]['status_color']
+                                              .toString())),
+                                  label: Text(schedules[index]['status_name']
+                                      .toString()),
                                 ),
                                 IconButton(
                                   color: Colors.grey,
@@ -123,8 +109,9 @@ class _FBMainProjectPageState extends State<FBMainProjectPage> {
                           Container(
                             height: 300,
                             padding: EdgeInsets.all(10),
-                            child: KanbanListWidget(
+                            child: SubKanbanListWidget(
                               statusId: index,
+                              id: widget.project.id,
                             ),
                           )
                         ],
@@ -142,6 +129,7 @@ class _FBMainProjectPageState extends State<FBMainProjectPage> {
   }
 
   _handleAccept(data, status) {
-    databaseUtil.updateProject(data, status.toString());
+    databaseUtil.updateSubProject(
+        widget.project.id, data.id, status.toString());
   }
 }
