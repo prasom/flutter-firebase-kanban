@@ -63,7 +63,8 @@ class _FBMainProjectPageState extends State<FBMainProjectPage> {
 
   Widget showKanban() {
     return new StreamBuilder<Event>(
-      stream: FirebaseDatabase.instance.reference().child('ProjectStatus').onValue,
+      stream:
+          FirebaseDatabase.instance.reference().child('ProjectStatus').onValue,
       builder: (BuildContext context, AsyncSnapshot<Event> event) {
         if (!event.hasData) return PendingAction();
         List<dynamic> schedules = event.data.snapshot.value;
@@ -110,7 +111,8 @@ class _FBMainProjectPageState extends State<FBMainProjectPage> {
                                   backgroundColor: Color(
                                       StatusColorUtil.getColorHexFromStr(
                                           schedules[index]['status_color'])),
-                                  label: Text(schedules[index]['status_name'].toString()),
+                                  label: Text(schedules[index]['status_name']
+                                      .toString()),
                                 ),
                                 IconButton(
                                   color: Colors.grey,
@@ -121,7 +123,7 @@ class _FBMainProjectPageState extends State<FBMainProjectPage> {
                             ),
                           ),
                           Container(
-                            height: 300,
+                            height: MediaQuery.of(context).size.height / 1.7,
                             padding: EdgeInsets.all(10),
                             child: KanbanListWidget(
                               statusId: index,

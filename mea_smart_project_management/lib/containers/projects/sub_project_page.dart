@@ -107,7 +107,7 @@ class _SubProjectPageState extends State<SubProjectPage> {
                             ),
                           ),
                           Container(
-                            height: 300,
+                            height: MediaQuery.of(context).size.height / 1.7,
                             padding: EdgeInsets.all(10),
                             child: SubKanbanListWidget(
                               statusId: index,
