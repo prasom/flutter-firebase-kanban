@@ -8,7 +8,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="mea_smart_project_management"
+        android:label="MEA Demo"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
