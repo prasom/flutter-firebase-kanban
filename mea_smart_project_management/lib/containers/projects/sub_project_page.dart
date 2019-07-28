@@ -92,11 +92,14 @@ class _SubProjectPageState extends State<SubProjectPage> {
                               children: <Widget>[
                                 Chip(
                                   backgroundColor: Color(
-                                      StatusColorUtil.getColorHexFromStr(
-                                          schedules[index]['status_color']
-                                              .toString())),
-                                  label: Text(schedules[index]['status_name']
-                                      .toString()),
+                                    StatusColorUtil.getColorHexFromStr(
+                                      schedules[index]['status_color']
+                                          .toString(),
+                                    ),
+                                  ),
+                                  label: Text(
+                                    schedules[index]['status_name'].toString(),
+                                  ),
                                 ),
                                 IconButton(
                                   color: Colors.grey,
@@ -113,7 +116,7 @@ class _SubProjectPageState extends State<SubProjectPage> {
                               statusId: index,
                               id: widget.project.id,
                             ),
-                          )
+                          ),
                         ],
                       ),
                     );

@@ -118,8 +118,8 @@ class FirebaseDatabaseUtil {
     });
   }
 
-  void updateProject(FBProject project, String statusId) async {
-    await _projectsRef.child(project.id).update({
+  void updateProject(id, String statusId) async {
+    await _projectsRef.child(id).update({
       "status_id": statusId,
     }).then((_) {
       print('Transaction  committed.');
@@ -140,7 +140,7 @@ class FirebaseDatabaseUtil {
   }
 
   void dispose() {
-    _messagesSubscription.cancel();
-    _counterSubscription.cancel();
+    // _messagesSubscription.cancel();
+    // _counterSubscription.cancel();
   }
 }
