@@ -89,24 +89,72 @@ class _MainProjectPageState extends State<MainProjectPage> {
                             padding: const EdgeInsets.all(12),
                             // child: Text(snapshot.data.kanbanList[row].status),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              // mainAxisAlignment: MainAxisAlignment.start,
+                              // mainAxisSize: MainAxisSize.max,
                               children: <Widget>[
-                                Chip(
-                                  backgroundColor: Color(
-                                    StatusColorUtil.getColorHexFromStr(
-                                      schedules[index]['status_color']
-                                          .toString(),
+                                // Expanded(
+                                //   child: Chip(
+                                //     backgroundColor: Color(
+                                //       StatusColorUtil.getColorHexFromStr(
+                                //         schedules[index]['status_color']
+                                //             .toString(),
+                                //       ),
+                                //     ),
+                                //     label: Text(
+                                //       schedules[index]['status_name']
+                                //           .toString(),
+                                //       overflow: TextOverflow.ellipsis,
+                                //       softWrap: true,
+                                //     ),
+                                //   ),
+                                // ),
+                                // SizedBox(
+                                //   width: 20,
+                                // ),
+                                // Container(
+                                //   width: 40,
+                                //   child: IconButton(
+                                //     color: Colors.grey,
+                                //     icon: Icon(Icons.more_vert),
+                                //     onPressed: () {},
+                                //   ),
+                                // )
+                                Expanded(
+                                  flex: 4,
+                                  child: Container(
+                                    // color: Colors.blue,
+                                    alignment: Alignment.centerLeft,
+                                    child: Chip(
+                                      backgroundColor: Color(
+                                        StatusColorUtil.getColorHexFromStr(
+                                          schedules[index]['status_color']
+                                              .toString(),
+                                        ),
+                                      ),
+                                      label: Text(
+                                        schedules[index]['status_name']
+                                            .toString(),
+                                        overflow: TextOverflow.ellipsis,
+                                        softWrap: true,
+                                      ),
                                     ),
                                   ),
-                                  label: Text(
-                                    schedules[index]['status_name'].toString(),
+                                ),
+                                Container(
+                                  width: 10,
+                                ),
+                                Expanded(
+                                  flex: 1,
+                                  child: Container(
+                                    // color: Colors.red,
+                                    height: 50,
+                                    child: IconButton(
+                                      color: Colors.grey,
+                                      icon: Icon(Icons.more_vert),
+                                      onPressed: () {},
+                                    ),
                                   ),
                                 ),
-                                IconButton(
-                                  color: Colors.grey,
-                                  icon: Icon(Icons.more_vert),
-                                  onPressed: () {},
-                                )
                               ],
                             ),
                           ),
