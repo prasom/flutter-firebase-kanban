@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mea_smart_project_management/models/fb_projects_model.dart';
+import 'package:mea_smart_project_management/utils/status_color_util.dart';
+import 'package:mea_smart_project_management/widgets/inline_map.dart';
 import 'package:mea_smart_project_management/widgets/kanban_status_widget.dart';
 import 'package:mea_smart_project_management/widgets/text_number_format.dart';
 import 'package:mea_smart_project_management/widgets/text_wrap.dart';
@@ -156,13 +158,13 @@ class ProjectDetailPage extends StatelessWidget {
           Divider(),
           Column(
             children: <Widget>[
-              // InlineMapWidget(
-              //   lat: project.lat,
-              //   long: project.long,
-              //   colorCode: StatusColorUtil.getMapColorByStatus(
-              //     project.status_id.toString(),
-              //   ),
-              // ),
+              InlineMapWidget(
+                lat: project.lat,
+                long: project.long,
+                colorCode: StatusColorUtil.getMapColorByStatus(
+                  project.status_id.toString(),
+                ),
+              ),
             ],
           ),
         ],
