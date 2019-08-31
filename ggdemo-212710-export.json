@@ -1,0 +1,81 @@
+{
+  "Departments" : {
+    "dept_1" : {
+      "name" : "NASA"
+    },
+    "dept_2" : {
+      "name" : "FBI"
+    },
+    "dept_3" : {
+      "name" : "X-MEN"
+    },
+    "dept_4" : {
+      "name" : "GUST"
+    },
+    "dept_5" : {
+      "name" : "MIB"
+    },
+    "dept_9999" : {
+      "name" : "CIA"
+    }
+  },
+  "ProjectStatus" : [ null, {
+    "status_color" : "#217cc7",
+    "status_name" : "ยังไม่เริ่มดำเนินการ"
+  }, {
+    "status_color" : "#388e3c",
+    "status_name" : "อยู่ระหว่างดำเนินการ"
+  }, {
+    "status_color" : "#f9a825",
+    "status_name" : "งานล่าช้าเกิดปัญหาอยู่ระหว่างแก้ไข"
+  }, {
+    "status_color" : "#838383",
+    "status_name" : "ดำเนินการเสร็จแล้ว"
+  } ],
+  "Projects" : {
+    "-LkgE1G5_KHfsctMPe_h" : {
+      "budget" : "50000",
+      "department" : {
+        "dept_1" : true,
+        "dept_2" : true,
+        "dept_3" : true,
+        "dept_4" : true,
+        "dept_9999" : true
+      },
+      "detail" : "(อาคาร, EHV, TR(230kv), HV, TR(115kv), MV, SA)\n\n230 - 115 : 2x300, 2x300 115/24 : 2x60\n\n230 - 115 : 2x300, 115/24",
+      "end_date" : "30/11/2021",
+      "file_upload" : {
+        "-Ll14lqfV4QaZBYqMDvH" : {
+          "file_name" : "AP0-pdf-4556.pdf",
+          "file_name_upload" : "1564476901408_403953.pdf",
+          "file_url" : "https://firebasestorage.googleapis.com/v0/b/mea-smart-management-2.appspot.com/o/Projects%2F1564476901408_403953.pdf?alt=media&token=2e218282-ed21-4c27-97e0-88c60d36e857"
+        }
+      },
+      "lat" : "13.8287837937023",
+      "long" : "100.552574475838",
+      "map_name" : "LTRAT3200002798780",
+      "project_code" : "project-001",
+      "project_name" : "ก่อสร้างสถานีต้นทางบางชื่อ (Construction of BANGSUE Terminal Station)",
+      "remark" : "",
+      "start_date" : "01/01/2018",
+      "status_id" : "4",
+      "sub_project" : {
+        "-LkgF-kWKGH7HUB2hGi8" : {
+          "budget" : "100",
+          "department" : {
+            "dept_2" : true
+          },
+          "detail" : "ซื้อของใช้",
+          "end_date" : "30/11/2018",
+          "lat" : "",
+          "long" : "",
+          "map_name" : "",
+          "project_code" : "DH01",
+          "project_name" : "งานออกแบบเพื่อจ้างก่อสร้างอาคารพร้อมจัดหาและติดตั้งอุปกรณ์",
+          "start_date" : "01/01/2018",
+          "status_id" : "4"
+        }
+      }
+    }
+  }
+}
