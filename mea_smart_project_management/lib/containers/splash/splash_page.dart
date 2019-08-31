@@ -59,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         padding: EdgeInsets.only(top: 10.0),
                       ),
                       Text(
-                        'MEA Smart Management',
+                        'Flutter Kanban',
                         style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

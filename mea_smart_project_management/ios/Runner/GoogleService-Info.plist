@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>987258514322-58bskaghqim86pa557o4nj94800fhd2v.apps.googleusercontent.com</string>
+	<string>955208030323-5ilvusrn06hiv2fuhfc35cjvl3g3vpgo.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.987258514322-58bskaghqim86pa557o4nj94800fhd2v</string>
+	<string>com.googleusercontent.apps.955208030323-5ilvusrn06hiv2fuhfc35cjvl3g3vpgo</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB4BKtJ-XubMZFWnj9W6kM6PPtAOi3Pekk</string>
+	<string>AIzaSyD1-C22wQAsYNFmtHc5B7P5e3EWNkz1qk4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>987258514322</string>
+	<string>955208030323</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.meaSmartProjectManagement</string>
 	<key>PROJECT_ID</key>
-	<string>mea-smart-management-2</string>
+	<string>ggdemo-212710</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mea-smart-management-2.appspot.com</string>
+	<string>ggdemo-212710.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:987258514322:ios:ab0390ae8c3526d4</string>
+	<string>1:955208030323:ios:ab0390ae8c3526d4</string>
 	<key>DATABASE_URL</key>
-	<string>https://mea-smart-management-2.firebaseio.com</string>
+	<string>https://ggdemo-212710.firebaseio.com</string>
 </dict>
 </plist>
